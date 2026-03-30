@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="shortcut icon" href="../assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  <script defer type="module" src="script.js"></script>
+</head>
+<body>
+
+<div id="main">
+
+  <dialog id="successDialog">
+    <div>
+      <img src="..\assets\images\icon-success-check.svg" alt="">
+      <p>Message Sent!</p>
+    </div>
+    <span>Thanks for completing the form. We'll be in touch soon</span>
+  </dialog>
+
+  <div class="contact">
+    <p>Contact Us</p>
+  </div>
+
+  <form id="form">
+
+    <div class="personalInfo">
+      <label for="FirstName">
+        First Name <span>*</span>
+        <input type="text" name="FirstName" id="FirstName">
+        <span class="error" id="FirstNameError"></span>
+      </label>
+      <label for="LastName">
+        Last Name <span>*</span>
+        <input type="text" name="LastName" id="LastName">
+        <span class="error" id="LastNameError"></span>
+      </label>
+    </div>
+
+    <div class="emailAddress">
+      <label for="EmailAddress">
+        Email Address <span>*</span>
+        <input type="email" name="EmailAddress" id="EmailAddress">
+        <span class="error" id="EmailAddressError"></span>
+      </label>
+    </div>
+
+    <div class="queryType">
+      <p>Query Type <span>*</span></p>
+
+      <div class="checkboxes">
+
+      <label class="queryTypeLabel">
+        <input type="radio" name="query" value="general">
+        <img src="..\assets\images\icon-radio-selected.svg" alt="" class="radio-default">
+        <p>General Enquiry</p>
+      </label>
+
+      <label class="queryTypeLabel">
+        <input type="radio" name="query" value="support">
+        <img src="..\assets\images\icon-radio-selected.svg" alt="" class="radio-default">
+        <p>Support Request</p>
+      </label>
+
+      </div>
+
+      <span class="error" id="QueryTypeError"></span>
+    </div>
+
+    <div class="message">
+      <p>Message <span>*</span></p>
+      <label for="MessageArea">
+        <textarea name="MessageArea" id="MessageArea"></textarea>
+        <span class="error" id="MessageAreaError"></span>
+      </label>
+    </div>
+
+    <div class="permision">
+
+      <label for="Accept">
+        <input type="checkbox" name="Accept" id="Accept">
+        <img src="..\assets\images\icon-checkbox-check.svg" alt="" class="checkbox-ui">
+        <p>I consent to being contacted by the team <span>*</span></p>
+      </label>
+
+      <span class="error" id="AcceptError"></span>
+    </div>
+
+    <div class="btn">
+      <button type="submit">Submit</button>
+    </div>
+
+  </form>
+</div>
+
+</body>
+</html>
